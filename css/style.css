@@ -1,0 +1,377 @@
+/* colors used
+ash gray rgb(160, 178, 166) #A0B2A6
+rhythm rgb(119, 113, 158) #77719E
+raisin black rgb(29, 30, 44) #1D1E2C
+melon rgb(246, 195, 181) #F6C3B5
+*/
+* {
+	box-sizing: border-box;
+}
+
+/* font styling*/
+body {
+	background-color: #ffffff;
+	font-family: 'Cormorant Garamond', sans-serif;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 1.6;
+	color: #1d1e2c;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	line-height: 1.4;
+}
+
+h1 {
+	font-size: 2em;
+	font-weight: 700;
+}
+
+h2 {
+	font-size: 2.25em;
+	font-weight: 700;
+}
+
+h3 {
+	font-size: 1.25em;
+	font-weight: 600;
+}
+
+h4 {
+	font-size: 1.35em;
+	font-weight: 500;
+}
+
+#span {
+	font-size: 1.25em;
+	font-weight: 600;
+}
+
+/*img styling*/
+img {
+	width: 100%;
+}
+
+/*hyperlink styling*/
+a {
+	color: #1D1E2C;
+	text-decoration: none;
+	/* No underlining */
+}
+
+a:visited {
+	/* visited link */
+	color: #1D1E2C;
+}
+
+a:hover {
+	color: #77719E;
+	text-decoration: underline;
+	/* Underlining when hovering over a link */
+}
+
+a:focus {
+	color: #1D1E2C;
+	text-decoration: underline;
+}
+
+a:active {
+	/* selected link */
+	color: #1D1E2C;
+}
+
+.button {
+	display: inline-block;
+	background-color: #1d1e2c;
+	color: #ffffff !important;
+	font-weight: 700;
+	padding: 10px;
+	border-radius: 3px;
+	border-bottom: 2px solid #1d1e2c;
+	transition-duration: 0.2s;
+	transition-property: opacity;
+	text-decoration: none;
+}
+
+.button:hover {
+	background-color: #1d1e2c;
+	text-decoration: underline;
+	opacity: 0.8;
+}
+
+.button:active {
+	background-color: #1d1e2c;
+	text-decoration: underline;
+}
+
+.button:hover {
+	opacity: 0.8;
+}
+
+/* unused button styling
+
+.button.contact {
+  background-color: transparent;
+  color: #77719E !important;
+  text-transform: uppercase;
+  border: 2px solid #77719E;
+}
+
+.button.contact:hover {
+  background-color: transparent;
+  color: #A0B2A6 !important;
+  border: 2px solid #A0B2A6;
+}
+
+.button.contact:active {
+  background-color: transparent;
+  color: #A0B2A6;
+  border: 2px solid #A0B2A6;
+} */
+
+
+/* Layout styling */
+.container {
+	padding: 15px 15px;
+}
+
+.row {
+	margin: 25px 0;
+	/* 25px top and bottom, 0 left and right */
+}
+
+.row::after {
+	content: '';
+	clear: both;
+	display: table;
+}
+
+#projects .row {
+	padding-bottom: 25px;
+	border-bottom: 1px solid #1d1e2c;
+}
+
+.center {
+	text-align: center;
+}
+
+.logo {
+	max-width: 150px;
+}
+
+header {
+	background-color: #ffffff;
+	padding: 10px 0 4px;
+	position: fixed;
+	width: 100%;
+	box-shadow: 1px 7px 5px 0px rgba(0, 0, 0, 0.16);
+	-webkit-box-shadow: 1px 7px 5px 0px rgba(0, 0, 0, 0.16);
+	-moz-box-shadow: 1px 7px 5px 0px rgba(0, 0, 0, 0.16);
+}
+
+nav > ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+nav > ul > li > a {
+	padding: 0 15px;
+	text-transform: uppercase;
+	font-weight: 700;
+	color: #77719e;
+}
+
+nav > ul > li > a:visited {
+	padding: 0 15px;
+	text-transform: uppercase;
+	font-weight: 700;
+	color: #a0b2a6;
+}
+
+nav > ul > li > a:hover {
+	padding: 0 15px;
+	text-transform: uppercase;
+	text-decoration: underline;
+	font-weight: 700;
+	color: #a0b2a6;
+}
+
+.navtoggle li:not(:last-child) {
+	display: none;
+}
+
+.navtoggle,
+.navtoggle.responsive {
+	position: relative;
+}
+
+.navtoggle li .icon {
+	position: absolute;
+	right: 0;
+	top: 2px;
+	font-size: 20px;
+	padding-right: 0;
+}
+
+.navtoggle.responsive li {
+	display: block;
+	padding: 10px 0;
+}
+
+#hero {
+	background-color: #a0b2a6;
+	padding: 20px 0;
+	display: inline-block;
+	width: 100%;
+}
+
+main {
+	padding-top: 108px;
+}
+
+#socials > ul > li {
+	display: inline-block;
+}
+
+#contact {
+	background-color: #a0b2a6;
+	padding: 20px 0;
+	display: inline-block;
+	width: 100%;
+}
+
+#profile_img {
+	max-width: 550px;
+}
+
+#slide {
+	width: 60%;
+	margin: 20px;
+	margin-right: 20 px
+}
+
+#skills {
+	margin: 75px;
+}
+
+@keyframes color-change {
+	0% {fill:#edc655;}
+	50% {fill:#fcffad;}
+	100% {fill:#f76414;}
+
+}
+
+.sun {
+	animation: 4s color-change infinite alternate linear;
+}
+
+@keyframes colud-move {
+	from {transform: translate(0,50px);}
+	to {transform: translate(200,50px);}
+}
+
+.cloud-front {
+		animation: 30s cloud-move infinite alternate linear;
+}
+
+@keyframes cloud-move-reverse {
+	from {transform: translate(446px,48px);}
+	to {transform: translate(100px, 48px);}
+}
+
+.cloud-back {
+	animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
+/* testing github */
+
+/* ==============================
+Medium devices (640px and larger)
+================================= */
+@media only screen and (min-width: 641px) {
+	main {
+		padding-top: 145px;
+	}
+	header {
+		text-align: unset;
+		padding: 20px 0 13px;
+		width: 100%;
+	}
+
+	nav {
+		width: auto;
+		float: right;
+		margin: 3px;
+	}
+
+	#hero span {
+		display: block;
+	}
+
+	[class*='col-'] {
+		float: left;
+		padding: 10px;
+	}
+
+	.col-md-6 {
+		width: 50%;
+	}
+
+
+	[class*='col-'] {
+		float: left;
+		padding: 10px;
+	}
+
+	.logo {
+		max-width: 200px;
+	}
+
+	nav > ul > li {
+		display: inline-block;
+	}
+
+	.navtoggle li:not(:last-child) {
+		display: inline-block;
+	}
+
+	.navtoggle li:last-child {
+		display: none;
+	}
+
+	nav > ul {
+		margin: 1em 0;
+	}
+
+}
+
+/* ==============================
+Large devices (1024px or larger)
+================================= */
+@media only screen and (min-width: 1024px) {
+}
+
+.container {
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.col-md-7 {
+	width: 60%;
+}
+
+.col-md-7 {
+	width: 40%;
+}
+
+
+/* ==============================
+X-large devices (1440px or larger)
+================================= */
+@media only screen and (min-width: 1440px) {
+}
