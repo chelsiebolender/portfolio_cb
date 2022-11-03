@@ -249,9 +249,8 @@ main {
 }
 
 #slide {
-	width: 60%;
-	margin: 20px;
-	margin-right: 20 px
+	max-width: 800px;
+	margin: auto;
 }
 
 #skills {
